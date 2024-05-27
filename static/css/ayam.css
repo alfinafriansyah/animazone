@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+/* POPUP */
+
+.ayam {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .8);
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: all .3s;
+}
+
+.ayam__content {
+    width: 50%;
+    background-color: #fff;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .2);
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(.25);
+    opacity: 0;
+
+    transition: all .5s .1s;
+}
+
+.ayam__img {
+    display: flex;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.ayam__img img {
+    display: block;
+    width: 33.3%
+}
+
+.ayam__header {
+    text-align: center;
+    text-transform: uppercase;
+    color: #555;
+    margin-bottom: 36px;
+}
+
+.ayam__header h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+} 
+
+.ayam__header h2 {
+    font-size: 20px;
+}
+
+.ayam__text {
+    padding: 0 36px;
+    line-height: 1.4;
+}
+
+.ayam__text p:not(:last-child) {
+    margin-bottom: 16px;
+}
+
+.ayam__btn {
+    background-color: #333;
+    margin-top: 30px;
+}
+
+#ayam:target {
+    opacity: 1;
+    visibility: visible;
+}
+
+#ayam:target .ayam__content {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.ayam__close:link,
+.ayam__close:visited {
+    position: absolute;
+    top: 12px;
+    right: 20px;
+    text-decoration: none;
+    color: #000;
+    font-size: 30px;
+    display: inline-block;
+    line-height: 1;
+    transition: all .3s;
+}
+
+.ayam__close:hover,
+.ayam__close:active{
+    color: #555;
+}
+
